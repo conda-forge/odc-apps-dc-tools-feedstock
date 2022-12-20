@@ -1,13 +1,13 @@
 {% set name = "odc-apps-dc-tools" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/opendatacube/odc-tools/raw/conda-build/apps/dc_tools/dist/odc-apps-dc-tools-0.2.7.tar.gz
-  sha256: 26b080b6d49b0919fda1d46ac52de4236495580dca25ee87835245abba72d48b
+  url: https://github.com/opendatacube/odc-tools/raw/conda-forge/apps/dc_tools/dist/odc-apps-dc-tools-0.2.8.tar.gz
+  sha256: 48ead2bc24e590bf092d2e3933c978ced80d868238b692d0d8788a47c45c5966
 
 build:
   entry_points:
@@ -18,9 +18,11 @@ build:
     - sqs-to-dc = odc.apps.dc_tools.sqs_to_dc:cli
     - stac-to-dc = odc.apps.dc_tools.stac_api_to_dc:cli
     - fs-to-dc = odc.apps.dc_tools.fs_to_dc:cli
+    - cop-dem-to-dc = odc.apps.dc_tools.cop_dem_to_dc:cli
+    - esa-wc-to-dc = odc.apps.dc_tools.esa_worldcover_to_dc:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 6
+  number: 0
 
 requirements:
   host:
@@ -38,9 +40,10 @@ requirements:
     - odc-io
     - odc-cloud
     - pystac >=1.0.0
+    - rio-stac
     - urlpath
     - datadog
-    - thredds_crawler
+    - eodatasets3
 
 test:
   imports:
@@ -54,6 +57,8 @@ test:
     - sqs-to-dc --help
     - stac-to-dc --help
     - fs-to-dc --help
+    - cop-dem-to-dc --help
+    - esa-wc-to-dc --help
   requires:
     - pip
 
