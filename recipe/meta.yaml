@@ -1,13 +1,13 @@
 {% set name = "odc-apps-dc-tools" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/opendatacube/odc-tools/raw/conda-build/apps/dc_tools/dist/odc-apps-dc-tools-0.2.7.tar.gz
-  sha256: 26b080b6d49b0919fda1d46ac52de4236495580dca25ee87835245abba72d48b
+  url: https://github.com/opendatacube/odc-tools/raw/conda-forge/apps/dc_tools/dist/odc-apps-dc-tools-0.2.8.tar.gz
+  sha256: 48ead2bc24e590bf092d2e3933c978ced80d868238b692d0d8788a47c45c5966
 
 build:
   entry_points:
@@ -22,7 +22,7 @@ build:
     - esa-wc-to-dc = odc.apps.dc_tools.esa_worldcover_to_dc:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 7
+  number: 0
 
 requirements:
   host:
