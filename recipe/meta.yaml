@@ -26,10 +26,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.7,<3.12
     - pip
   run:
-    - python >=3.7
+    - python >=3.7,<3.12
     - aiobotocore
     - click
     - fsspec
