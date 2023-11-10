@@ -1,11 +1,11 @@
-About odc-apps-dc-tools
-=======================
+About odc-apps-dc-tools-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/odc-apps-dc-tools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/opendatacube/odc-tools/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/odc-apps-dc-tools-feedstock/blob/main/LICENSE.txt)
 
 Summary: CLI utils for working with a datacube index
 
@@ -144,4 +144,6 @@ Feedstock Maintainers
 =====================
 
 * [@Ariana-B](https://github.com/Ariana-B/)
+* [@SpacemanPaul](https://github.com/SpacemanPaul/)
+* [@omad](https://github.com/omad/)
 
