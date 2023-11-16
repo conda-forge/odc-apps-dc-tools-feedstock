@@ -1,13 +1,13 @@
 {% set name = "odc-apps-dc-tools" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/opendatacube/odc-tools/raw/conda-forge/apps/dc_tools/dist/odc-apps-dc-tools-0.2.8.tar.gz
-  sha256: 48ead2bc24e590bf092d2e3933c978ced80d868238b692d0d8788a47c45c5966
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: bc3bb7fc2ac83a39d7c191851c6d814fd9ef7a1e3a56db5468cb5f3e08923fde
 
 build:
   entry_points:
@@ -26,10 +26,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.7,<3.12
     - pip
   run:
-    - python >=3.7
+    - python >=3.7,<3.12
     - aiobotocore
     - click
     - fsspec
@@ -71,3 +71,5 @@ about:
 extra:
   recipe-maintainers:
     - Ariana-B
+    - omad
+    - SpacemanPaul
