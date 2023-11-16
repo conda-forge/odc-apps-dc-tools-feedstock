@@ -1,5 +1,5 @@
 {% set name = "odc-apps-dc-tools" %}
-{% set version = "0.2.14" %}
+{% set version = "0.2.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc3bb7fc2ac83a39d7c191851c6d814fd9ef7a1e3a56db5468cb5f3e08923fde
+  sha256: d0ca1240b3fe131283b25274a0386708502068c6cd481a63a58018126fcb2131
 
 build:
   entry_points:
