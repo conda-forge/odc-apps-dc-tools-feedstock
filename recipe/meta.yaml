@@ -22,28 +22,29 @@ build:
     - esa-wc-to-dc = odc.apps.dc_tools.esa_worldcover_to_dc:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 2
 
 requirements:
   host:
-    - python >=3.7,<3.12
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7,<3.12
+    - python >={{ python_min }}
     - aiobotocore
     - click
     - fsspec
     - pystac-client >=0.2.0
     - toolz
     - pyyaml
-    - datacube >=1.8.8
+    - datacube >=1.8.15,<1.9.0
     - odc-io
     - odc-cloud
     - pystac >=1.0.0
     - rio-stac
     - urlpath
     - datadog
-    - eodatasets3
+    - eodatasets3 <1.9.0
 
 test:
   imports:
@@ -61,6 +62,7 @@ test:
     - esa-wc-to-dc --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/opendatacube/odc-tools/
