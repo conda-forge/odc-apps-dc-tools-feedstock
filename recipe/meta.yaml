@@ -44,7 +44,8 @@ requirements:
     - rio-stac
     - urlpath
     - datadog
-    - eodatasets3 <1.9.0
+    - eodatasets3 >=1.9.0
+    - odc-stac
 
 test:
   imports:
