@@ -1,5 +1,5 @@
 {% set name = "odc-apps-dc-tools" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: a15f3cb2c8306bd7873edde33a7a4c22eb6d9207510734b06ca2294834ce344f
+  sha256: 4037e6fde5a5282342a5a7bf0adbcb84ad404c73f9b56e5a8e44a0d4b42d476d
 
 build:
   entry_points:
@@ -22,7 +22,7 @@ build:
     - esa-wc-to-dc = odc.apps.dc_tools.esa_worldcover_to_dc:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
