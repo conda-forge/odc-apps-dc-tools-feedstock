@@ -32,20 +32,18 @@ requirements:
   run:
     - python >={{ python_min }}
     - aiobotocore
-    - click
+    - click <8.3
     - fsspec
     - pystac-client >=0.2.0
-    - toolz
     - pyyaml
-    - datacube >=1.9.0
-    - odc-io
+    - datacube >=1.9.10
     - odc-cloud
-    - pystac >=1.0.0
+    - odc-geo
+    - odc-io
+    - pystac >=1.0.0, >2
     - rio-stac
-    - urlpath
     - datadog
-    - eodatasets3 >=1.9.0
-    - odc-stac
+    - toolz
 
 test:
   imports:
