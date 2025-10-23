@@ -40,7 +40,7 @@ requirements:
     - odc-cloud
     - odc-geo
     - odc-io
-    - pystac >=1.0.0, >2
+    - pystac >=1.0.0,<2
     - rio-stac
     - datadog
     - toolz
