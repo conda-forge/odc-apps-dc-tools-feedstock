@@ -36,7 +36,7 @@ requirements:
     - fsspec
     - pystac-client >=0.2.0
     - pyyaml
-    - datacube >=1.9.10
+    - datacube >=1.9.10,<1.10.0
     - odc-cloud
     - odc-geo
     - odc-io
