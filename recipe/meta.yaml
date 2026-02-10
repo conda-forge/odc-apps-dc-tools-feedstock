@@ -42,11 +42,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - aiobotocore
-    - click <8.3
+    - click >8.3.0
     - fsspec
     - pystac-client >=0.2.0
     - pyyaml
-    - datacube >=1.9.12,<1.10.0
+    - datacube >=1.9.14,<1.10.0
     - odc-cloud
     - odc-geo
     - odc-io
