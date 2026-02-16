@@ -1,5 +1,6 @@
 {% set name = "odc-apps-dc-tools" %}
 {% set version = "1.9.8" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
